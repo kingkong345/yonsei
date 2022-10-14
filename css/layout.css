@@ -19,11 +19,14 @@ button {
   background: none;
   border: none;
   outline: none;
+  color: inherit;
 }
 
 .container {
   width: 1460px;
   margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
 }
 
 #header {
@@ -34,6 +37,11 @@ button {
   width: 1840px;
   display: flex;
   justify-content: space-between;
+}
+#header #logo {
+  display: flex;
+  align-items: center;
+  height: 120px;
 }
 #header #logo img {
   width: 200px;
@@ -113,4 +121,62 @@ button {
 #header #gnb .list .depth02 li a {
   padding: 15px 0;
   display: block;
+}
+#header .util {
+  display: flex;
+  align-items: center;
+  height: 120px;
+}
+#header .util .language {
+  background-color: #ccc;
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px;
+  transition: all 0.25s ease;
+  position: relative;
+}
+#header .util .language:hover {
+  color: #fff;
+  background-color: #0467b3;
+}
+#header .util .language:hover ul {
+  display: block;
+  opacity: 1;
+  top: 60px;
+}
+#header .util .language ul {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  top: 80px;
+  background-color: #0467b3;
+  left: 0;
+  border-radius: 10px;
+  transition: all 0.25s ease;
+  color: #fff;
+  padding: 10px 0;
+}
+#header .util .language ul li a {
+  display: block;
+  padding: 10px 0;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+#header .util .language button {
+  text-transform: uppercase;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+#header .util .language button::before {
+  content: "\e894";
+  font-family: "Material Icons";
+  font-size: 24px;
+  font-weight: 300;
+  margin-right: 10px;
+}
+#header .util .all-menu {
+  font-size: 24px;
+  margin-left: 40px;
 }
